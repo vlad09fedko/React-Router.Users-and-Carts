@@ -1,6 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router';
+import store from '@/app/reduxStore.js';
 
 import App from './app/App';
 
@@ -8,6 +10,10 @@ import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </StrictMode>,
 );
