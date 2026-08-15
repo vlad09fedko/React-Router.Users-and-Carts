@@ -1,12 +1,7 @@
-import { Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 
 function Home() {
-  return (
-    <Stack sx={{
-      minHeight:'5em'
-    }}>
-    </Stack>
-  );
+  return <Stack>Home</Stack>;
 }
 
 export default Home;

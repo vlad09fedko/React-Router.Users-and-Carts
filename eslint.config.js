@@ -46,19 +46,18 @@ export default [
 
       'react/jsx-uses-vars': 'error',
       'react/jsx-uses-react': 'off',
+      'react/jsx-no-useless-fragment': 'warn',
+      'react/jsx-key': 'error',
+      'react/no-array-index-key': 'error',
 
       'no-unused-vars': 'warn',
       'no-undef': 'error',
-      eqeqeq: 'error',
+      'eqeqeq': 'error',
       'no-console': 'warn',
       'prefer-const': 'warn',
       'no-var': 'error',
       'object-shorthand': 'error',
       'no-restricted-globals': ['error'],
-
-      'react/jsx-no-useless-fragment': 'warn',
-      'react/no-array-index-key': 'error',
-      'react/jsx-key': 'error',
 
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'off',

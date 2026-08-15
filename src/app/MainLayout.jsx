@@ -1,16 +1,14 @@
 import { Outlet } from 'react-router';
-import { AppBar, Stack, Typography } from '@mui/material';
+
+import Footer from '../widgets/Footer/ui/Footer';
+import Header from '../widgets/Header/ui/Header';
 
 function MainLayout() {
   return (
     <>
-      <AppBar>
-        <Typography>HEADER</Typography>
-      </AppBar>
+      <Header></Header>
       <Outlet />
-      <Stack>
-        <Typography>FOOTER</Typography>
-      </Stack>
+      <Footer></Footer>
     </>
   );
 }
