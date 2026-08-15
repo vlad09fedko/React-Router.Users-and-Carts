@@ -15,7 +15,7 @@ function Header() {
           <MenuIcon />
         </IconButton>
         <Typography
-          variant='h6'
+          variant='h5'
           component='div'
           sx={{ flexGrow: 1, textAlign: 'center' }}>
           Users and Carts

@@ -1,7 +1,5 @@
-import { Stack } from '@mui/material';
-
 function Home() {
-  return <Stack>Home</Stack>;
+  return <>Home</>;
 }
 
 export default Home;
