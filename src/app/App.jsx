@@ -12,10 +12,10 @@ function App() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route index path='/' element={<Home />} />
-        <Route path='/Carts' element={<CartsList />} />
-        <Route path='/Carts/:id' element={<Cart />} />
-        <Route path='/Users' element={<UsersList />} />
-        <Route path='/Users/:id' element={<UserForm />} />
+        <Route path='/carts' element={<CartsList />} />
+        <Route path='/carts/:id' element={<Cart />} />
+        <Route path='/users' element={<UsersList />} />
+        <Route path='/users/:id' element={<UserForm />} />
       </Route>
     </Routes>
   );

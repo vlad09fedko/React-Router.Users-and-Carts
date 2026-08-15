@@ -1,9 +1,7 @@
-import { NavLink, Route, Routes } from 'react-router';
+import { NavLink } from 'react-router';
 import { Button, ButtonGroup, Card, Typography } from '@mui/material';
 
 import { useDeleteUserMutation } from '@/entities/users/api/userApi';
-
-import UserForm from '@/pages/UserForm/ui/UserForm';
 
 import style from '../styles/userCard.module.css';
 
@@ -38,9 +36,6 @@ function UserCard({ user: { image, firstName, lastName, id } }) {
           Delete
         </Button>
       </ButtonGroup>
-      <Routes>
-        <Route path='/:id' element={<UserForm />} />
-      </Routes>
     </Card>
   );
 }

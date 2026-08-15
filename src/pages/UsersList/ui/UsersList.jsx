@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 
 import { useGetAllUsersQuery } from '@/entities/users/api/userApi';
 
@@ -7,7 +7,14 @@ import UserCard from '@/widgets/UserCard/ui/UserCard';
 function Users() {
   const { data, isLoading } = useGetAllUsersQuery();
   const users = data?.users ?? [];
-  if (isLoading) return <p>Loading...</p>;
+  
+  if (isLoading)
+    return (
+      <Typography variant='h3' align='center' sx={{ padding: '1em' }}>
+        Loading...
+      </Typography>
+    );
+
   return (
     <Grid
       container

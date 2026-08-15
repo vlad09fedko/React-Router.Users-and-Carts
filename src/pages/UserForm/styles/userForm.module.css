@@ -1,0 +1,19 @@
+.user-form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border: 2px dashed #1976d2;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.user-form > fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.user-form legend {
+  margin: 0 auto;
+}

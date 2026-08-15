@@ -8,7 +8,7 @@ export const userApi = baseApi.injectEndpoints({
     }),
     getSingleUser: build.query({
       query: id => `users/${id}`,
-      providesTags: (res, err, id) => [{ type: 'Users', id }],
+      providesTags: (_, __, id) => [{ type: 'Users', id }],
     }),
     updateUser: build.mutation({
       query: user => ({

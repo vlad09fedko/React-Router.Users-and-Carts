@@ -8,16 +8,8 @@ export const cartApi = baseApi.injectEndpoints({
     }),
     getSingleCart: build.query({
       query: id => `carts/${id}`,
-      providesTags: (res, err, id) => [{ type: 'Carts', id }],
+      providesTags: (_, __, id) => [{ type: 'Carts', id }],
     }),
-    // createCart: build.mutation({
-    //   query: cart => ({
-    //     url: 'carts',
-    //     method: 'POST',
-    //     body: cart,
-    //   }),
-    //   invalidatesTags: ['Carts'],
-    // }),
     updateCart: build.mutation({
       query: cart => ({
         url: `carts/${cart.id}`,
@@ -40,7 +32,6 @@ export const cartApi = baseApi.injectEndpoints({
 export const {
   useGetAllCartsQuery,
   useGetSingleCartQuery,
-  // useCreateCartMutation,
   useUpdateCartMutation,
   useDeleteCartMutation,
 } = cartApi;
