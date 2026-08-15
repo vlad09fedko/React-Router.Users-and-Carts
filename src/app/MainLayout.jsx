@@ -6,9 +6,9 @@ import Header from '../widgets/Header/ui/Header';
 function MainLayout() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <Outlet />
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

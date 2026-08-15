@@ -1,10 +1,6 @@
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
-import AppBar from '@mui/material/AppBar';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
 
 function Header() {
   return (
@@ -24,30 +20,14 @@ function Header() {
           sx={{ flexGrow: 1, textAlign: 'center' }}>
           Users and Carts
         </Typography>
-        {
-          <div>
-            <IconButton
-              size='large'
-              aria-label='account of current user'
-              aria-controls='menu-appbar'
-              aria-haspopup='true'
-              color='inherit'>
-              <AccountCircle />
-            </IconButton>
-            <Menu
-              id='menu-appbar'
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-            />
-          </div>
-        }
+        <IconButton
+          size='large'
+          aria-label='account of current user'
+          aria-controls='menu-appbar'
+          aria-haspopup='true'
+          color='inherit'>
+          <AccountCircle />
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
