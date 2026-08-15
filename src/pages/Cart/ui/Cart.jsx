@@ -22,7 +22,7 @@ function Cart() {
         border: '2px dashed #1976d2',
         borderRadius: '5em',
         width: 'fit-content',
-        margin: 'auto',
+        margin: '0 auto',
         padding: '1em 5em',
       }}>
       {products.map(({ id, title, price, quantity }) => (

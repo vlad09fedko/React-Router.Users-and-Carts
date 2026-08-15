@@ -7,14 +7,14 @@ import NavBar from '@/widgets/NavBar/ui/NavBar';
 
 function MainLayout() {
   return (
-    <>
+    <Stack sx={{ minHeight: '100vh' }}>
       <Header />
       <NavBar />
-      <Stack sx={{ justifyContent: 'center' }}>
+      <Stack sx={{ flex: 1 }}>
         <Outlet />
       </Stack>
       <Footer />
-    </>
+    </Stack>
   );
 }
 
