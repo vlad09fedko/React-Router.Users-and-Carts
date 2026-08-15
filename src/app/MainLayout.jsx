@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router';
+import { Stack } from '@mui/material';
 
 import Footer from '@/widgets/Footer/ui/Footer';
 import Header from '@/widgets/Header/ui/Header';
@@ -9,7 +10,9 @@ function MainLayout() {
     <>
       <Header />
       <NavBar />
-      <Outlet />
+      <Stack sx={{ justifyContent: 'center' }}>
+        <Outlet />
+      </Stack>
       <Footer />
     </>
   );
