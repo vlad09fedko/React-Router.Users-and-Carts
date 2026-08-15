@@ -1,0 +1,21 @@
+/* :root {
+  color-scheme: light dark;
+} */
+
+/* @media (prefers-color-scheme: light) {
+} 
+
+@media (prefers-color-scheme: dark) {
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
