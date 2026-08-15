@@ -18,7 +18,7 @@ function UserForm() {
   const navigate = useNavigate();
 
   const { id } = useParams();
-  const { data, isLoading } = useGetSingleUserQuery(id);
+  const { data: user, isLoading } = useGetSingleUserQuery(id);
 
   if (isLoading)
     return (
@@ -87,7 +87,7 @@ function UserForm() {
 
   return (
     <Formik
-      initialValues={data}
+      initialValues={user}
       onSubmit={submitForm}
       validationSchema={validationSchema}
       enableReinitialize>
