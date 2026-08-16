@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router';
-import { ButtonGroup, Card, Typography } from '@mui/material';
+import { Button, ButtonGroup, Card, Typography } from '@mui/material';
 
 import { useDeleteUserMutation } from '@/entities/user';
 
