@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router';
 import { List, ListItem, Typography } from '@mui/material';
 
-import { useGetAllCartsQuery } from '@/entities/cart/api/cartApi.js';
+import { useGetAllCartsQuery } from '@/entities/cart';
 
 import styles from '../styles/cartsList.module.css';
 

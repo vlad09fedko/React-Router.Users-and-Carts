@@ -1,8 +1,8 @@
 import { Grid, Typography } from '@mui/material';
 
-import { useGetAllUsersQuery } from '@/entities/user/api/userApi';
+import { useGetAllUsersQuery } from '@/entities/user';
 
-import UserCard from '@/widgets/UserCard/ui/UserCard';
+import { UserCard } from '@/widgets/UserCard';
 
 function Users() {
   const { data, isLoading } = useGetAllUsersQuery();

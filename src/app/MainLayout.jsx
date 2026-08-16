@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router';
 import { Stack } from '@mui/material';
 
-import Footer from '@/widgets/Footer/ui/Footer';
-import Header from '@/widgets/Header/ui/Header';
-import NavBar from '@/widgets/NavBar/ui/NavBar';
+import { Header } from '@/widgets/Header';
+import { NavBar } from '@/widgets/NavBar';
+import { Footer } from '@/widgets/Footer';
 
 function MainLayout() {
   return (

@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 
-import { useDeleteUserMutation } from '@/entities/user/api/userApi';
+import { useDeleteUserMutation } from '@/entities/user';
 
 function DeleteBtn({ id }) {
   const [deleteUser] = useDeleteUserMutation();

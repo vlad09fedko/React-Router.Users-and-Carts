@@ -2,13 +2,10 @@ import { useNavigate, useParams } from 'react-router';
 import { Button, Stack, Typography } from '@mui/material';
 import { Form, Formik } from 'formik';
 
-import {
-  useGetSingleUserQuery,
-  useUpdateUserMutation,
-} from '@/entities/user/api/userApi';
-import validationSchema from '@/pages/UserForm/model/validationSchema';
+import { useGetSingleUserQuery, useUpdateUserMutation } from '@/entities/user';
+import validationSchema from '../model/validationSchema';
 
-import InputStack from '@/shared/InputStack/InputStack';
+import { InputStack } from '@/shared/InputStack';
 
 import styles from '../styles/userForm.module.css';
 
