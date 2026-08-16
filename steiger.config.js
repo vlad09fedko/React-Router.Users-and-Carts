@@ -4,12 +4,9 @@ import { defineConfig } from 'steiger';
 export default defineConfig([
   ...fsd.configs.recommended,
   {
-    files: ['./src/**'],
+    files: ['./src/sared/**'],
     rules: {
       'fsd/public-api': 'off',
-      'fsd/repetitive-naming': 'warn',
-      'fsd/typo-in-layer-name': 'error',
-      'fsd/import-locality': 'error',
     },
   },
 ]);

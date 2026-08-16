@@ -1,4 +1,4 @@
-import baseApi from '@/shared/baseApi';
+import baseApi from '@/shared/api/baseApi';
 
 export const cartApi = baseApi.injectEndpoints({
   endpoints: build => ({

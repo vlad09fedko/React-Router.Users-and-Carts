@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router';
 import { List, ListItem, Typography } from '@mui/material';
 
-import { useGetAllCartsQuery } from '@/entities/carts/api/cartApi.js';
+import { useGetAllCartsQuery } from '@/entities/cart/api/cartApi.js';
 
 import styles from '../styles/cartsList.module.css';
 
-function Carts() {
+function CartsList() {
   const { data, isLoading } = useGetAllCartsQuery();
   const carts = data?.carts ?? [];
 
@@ -49,4 +49,4 @@ function Carts() {
   );
 }
 
-export default Carts;
+export default CartsList;

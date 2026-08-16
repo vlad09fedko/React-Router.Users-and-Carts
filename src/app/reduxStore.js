@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { logger } from 'redux-logger';
 
-import baseApi from '@/shared/baseApi';
+import baseApi from '@/shared/api/baseApi';
 
 export default configureStore({
   reducer: {

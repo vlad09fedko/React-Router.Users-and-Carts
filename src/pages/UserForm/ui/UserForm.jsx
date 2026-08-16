@@ -5,10 +5,10 @@ import { Form, Formik } from 'formik';
 import {
   useGetSingleUserQuery,
   useUpdateUserMutation,
-} from '@/entities/users/api/userApi';
-import validationSchema from '@/pages/UserForm/validations/validationSchema';
+} from '@/entities/user/api/userApi';
+import validationSchema from '@/pages/UserForm/model/validationSchema';
 
-import InputStack from '@/shared/InputStack/ui/InputStack';
+import InputStack from '@/shared/InputStack/InputStack';
 
 import styles from '../styles/userForm.module.css';
 

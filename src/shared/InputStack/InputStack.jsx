@@ -1,7 +1,7 @@
 import { Stack, TextField } from '@mui/material';
 import { ErrorMessage, useField } from 'formik';
 
-import styles from '../styles/inputStack.module.css';
+import styles from './inputStack.module.css';
 
 function InputStack({ label, name, required = false }) {
   const [field] = useField(name);

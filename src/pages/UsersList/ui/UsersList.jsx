@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 
-import { useGetAllUsersQuery } from '@/entities/users/api/userApi';
+import { useGetAllUsersQuery } from '@/entities/user/api/userApi';
 
 import UserCard from '@/widgets/UserCard/ui/UserCard';
 

@@ -1,7 +1,7 @@
 import { useParams } from 'react-router';
 import { List, ListItem, Typography } from '@mui/material';
 
-import { useGetSingleCartQuery } from '@/entities/carts/api/cartApi';
+import { useGetSingleCartQuery } from '@/entities/cart/api/cartApi';
 
 import styles from '../styles/cart.module.css';
 
