@@ -7,7 +7,7 @@ import UserCard from '@/widgets/UserCard/ui/UserCard';
 function Users() {
   const { data, isLoading } = useGetAllUsersQuery();
   const users = data?.users ?? [];
-  
+
   if (isLoading)
     return (
       <Typography variant='h3' align='center' sx={{ padding: '1em' }}>
@@ -21,7 +21,7 @@ function Users() {
       spacing={3}
       sx={{
         width: '95%',
-        margin: 'auto',
+        margin: '0 auto',
       }}>
       {users.map(user => (
         <UserCard key={user.id} user={user} />

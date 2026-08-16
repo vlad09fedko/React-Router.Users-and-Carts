@@ -1,12 +1,9 @@
 import { NavLink } from 'react-router';
 import { Typography } from '@mui/material';
 
-import styles from '../styles/navLink.module.css';
-
 export default function ({ text, ...props }) {
   return (
     <NavLink
-      className={styles.link}
       {...props}
       style={({ isActive }) => ({
         border: '2px dashed #1976d2',
