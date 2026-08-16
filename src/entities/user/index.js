@@ -1,6 +1,1 @@
-export {
-  useGetAllUsersQuery,
-  useGetSingleUserQuery,
-  useUpdateUserMutation,
-  useDeleteUserMutation,
-} from './api/userApi';
+export * from './api/userApi';

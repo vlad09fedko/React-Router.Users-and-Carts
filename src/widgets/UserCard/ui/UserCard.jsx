@@ -1,13 +1,24 @@
 import { useNavigate } from 'react-router';
 import { ButtonGroup, Card, Typography } from '@mui/material';
 
-import DeleteBtn from '@/features/delete-user/ui/DeleteBtn';
-import EditBtn from '@/features/edit-user/ui/EditBtn';
+import { useDeleteUserMutation } from '@/entities/user';
 
 import style from '../styles/userCard.module.css';
 
 function UserCard({ user: { image, firstName, lastName, id } }) {
   const navigate = useNavigate();
+  const [deleteUser] = useDeleteUserMutation();
+
+  const onDeleteBtn = e => {
+    e.stopPropagation();
+    deleteUser(id).unwrap();
+  };
+
+  const onEditBtn = e => {
+    e.stopPropagation();
+    navigate(`/users/${id}`);
+  };
+
   return (
     <Card
       onClick={() => navigate(`/carts/${id}`)}
@@ -30,8 +41,13 @@ function UserCard({ user: { image, firstName, lastName, id } }) {
       </Typography>
 
       <ButtonGroup fullWidth>
-        <EditBtn id={id}></EditBtn>
-        <DeleteBtn id={id}></DeleteBtn>
+        <Button onClick={onEditBtn} variant='outlined' color='info'>
+          Edit
+        </Button>
+
+        <Button variant='outlined' color='error' onClick={onDeleteBtn}>
+          Delete
+        </Button>
       </ButtonGroup>
     </Card>
   );

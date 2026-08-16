@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router';
-import MainLayout from './MainLayout';
 
+import MainLayout from './layout/MainLayout';
 import { Home } from '@/pages/Home/';
 import { UsersList } from '@/pages/UsersList/';
 import { UserForm } from '@/pages/UserForm/';

@@ -1,1 +1,1 @@
-export { useGetAllCartsQuery, useGetSingleCartQuery } from './api/cartApi';
+export * from './api/cartApi';

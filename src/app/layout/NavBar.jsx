@@ -1,6 +1,6 @@
 import { Stack } from '@mui/material';
 
-import NavLink from '@/shared/NavLink/NavLink';
+import { NavLink } from '@/shared/NavLink';
 
 function NavBar() {
   return (
