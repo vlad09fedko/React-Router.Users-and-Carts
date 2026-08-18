@@ -1,11 +1,12 @@
 import { useNavigate, useParams } from 'react-router';
-import { Button, Stack, Typography } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import { Form, Formik } from 'formik';
 
 import { useGetSingleUserQuery, useUpdateUserMutation } from '@/entities/user';
 import validationSchema from '../model/validationSchema';
 
 import { InputStack } from '@/shared/InputStack';
+import { Spinner } from '@/shared/Spinner';
 
 import styles from '../styles/userForm.module.css';
 
@@ -17,12 +18,7 @@ function UserForm() {
   const { id } = useParams();
   const { data: user, isLoading } = useGetSingleUserQuery(id);
 
-  if (isLoading)
-    return (
-      <Typography variant='h3' align='center' sx={{ padding: '1em' }}>
-        Loading...
-      </Typography>
-    );
+  if (isLoading) return <Spinner />;
 
   const submitForm = async values => await updateUser(values).unwrap();
 

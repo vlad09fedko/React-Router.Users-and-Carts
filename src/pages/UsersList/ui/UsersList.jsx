@@ -1,19 +1,15 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 
 import { useGetAllUsersQuery } from '@/entities/user';
 
 import { UserCard } from '@/widgets/UserCard';
+import { Spinner } from '@/shared/Spinner';
 
 function Users() {
   const { data, isLoading } = useGetAllUsersQuery();
   const users = data?.users ?? [];
 
-  if (isLoading)
-    return (
-      <Typography variant='h3' align='center' sx={{ padding: '1em' }}>
-        Loading...
-      </Typography>
-    );
+  if (isLoading) return <Spinner />;
 
   return (
     <Grid

@@ -3,18 +3,15 @@ import { List, ListItem, Typography } from '@mui/material';
 
 import { useGetAllCartsQuery } from '@/entities/cart';
 
+import { Spinner } from '@/shared/Spinner';
+
 import styles from '../styles/cartsList.module.css';
 
 function CartsList() {
   const { data, isLoading } = useGetAllCartsQuery();
   const carts = data?.carts ?? [];
 
-  if (isLoading)
-    return (
-      <Typography variant='h3' align='center' sx={{ padding: '1em' }}>
-        Loading...
-      </Typography>
-    );
+  if (isLoading) return <Spinner />;
 
   return (
     <List
